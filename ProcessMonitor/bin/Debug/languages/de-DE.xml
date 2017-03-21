@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Identifier>de-DE</Identifier> <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
+	<Name>Deutsch</Name>
+	<Words>
+		<Word>
+			<Key>Processes</Key>
+			<Value>Prozessauswahl:</Value>
+		</Word>
+		<Word>
+			<Key>Delay</Key>
+			<Value>Verzögerung (in ms):</Value>
+		</Word>
+		<Word>
+			<Key>LogToCSV</Key>
+			<Value>In CSV loggen</Value>
+		</Word>
+		<Word>
+			<Key>EndMeasuring</Key>
+			<Value>Messung beenden</Value>
+		</Word>
+		<Word>
+			<Key>SaveRAMUsage</Key>
+			<Value>RAM-Nutzung als Bild speichern</Value>
+		</Word>
+		<Word>
+			<Key>SaveCPUUsage</Key>
+			<Value>CPU-Nutzung als Bild speichern</Value>
+		</Word>
+		<Word>
+			<Key>UsedRAM</Key>
+			<Value>Benutzter RAM des Prozesses (in MB)</Value>
+		</Word>
+		<Word>
+			<Key>UsedCPU</Key>
+			<Value>Benutzter CPU des Prozesses (in %)</Value>
+		</Word>
+		<Word>
+			<Key>RAMUtilisation</Key>
+			<Value>RAM-Auslastung</Value>
+		</Word>
+		<Word>
+			<Key>CPUUtilisation</Key>
+			<Value>CPU-Auslastung</Value>
+		</Word>
+		<Word>
+			<Key>CurrentProcess</Key>
+			<Value>Aktueller Prozess</Value>
+		</Word>
+		<Word>
+			<Key>ProcessId</Key>
+			<Value>Prozess Id</Value>
+		</Word>
+		<Word>
+			<Key>SizeInMB</Key>
+			<Value>Größe in MB</Value>
+		</Word>
+	</Words>
+</Language>
