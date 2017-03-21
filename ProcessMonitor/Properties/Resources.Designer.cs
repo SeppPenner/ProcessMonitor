@@ -59,23 +59,5 @@ namespace ProcessMonitor.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Jpeg|*.jpg|Png|*.png|Bitmap|*.bmp|Tiff|*.tif|Gif|*.gif ähnelt.
-        /// </summary>
-        internal static string FilterImages {
-            get {
-                return ResourceManager.GetString("FilterImages", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Bild speichern unter... ähnelt.
-        /// </summary>
-        internal static string SaveImageTitle {
-            get {
-                return ResourceManager.GetString("SaveImageTitle", resourceCulture);
-            }
-        }
     }
 }

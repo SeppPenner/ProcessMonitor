@@ -55,5 +55,9 @@
 			<Key>SizeInMB</Key>
 			<Value>Größe in MB</Value>
 		</Word>
+		<Word>
+			<Key>SaveImageAs</Key>
+			<Value>Bild speichern unter...</Value>
+		</Word>
 	</Words>
 </Language>

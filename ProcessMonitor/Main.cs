@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Languages.Implementation;
 using Languages.Interfaces;
-using ProcessMonitor.Properties;
 using ProcessMonitor.UiThreadInvoke;
 
 namespace ProcessMonitor
@@ -267,8 +266,8 @@ namespace ProcessMonitor
             _backgroundworkerRefresh.CancelAsync();
             var saveFileDialog = new SaveFileDialog
             {
-                Filter = Resources.FilterImages,
-                Title = Resources.SaveImageTitle
+                Filter = @"Jpeg|*.jpg|Png|*.png|Bitmap|*.bmp|Tiff|*.tif|Gif|*.gif",
+                Title = _lang.GetWord("SaveImageAs")
             };
             saveFileDialog.ShowDialog();
             if (saveFileDialog.FileName.Equals("")) return;
@@ -301,8 +300,8 @@ namespace ProcessMonitor
             _backgroundworkerRefresh.CancelAsync();
             var saveFileDialog = new SaveFileDialog
             {
-                Filter = Resources.FilterImages,
-                Title = Resources.SaveImageTitle
+                Filter = @"Jpeg|*.jpg|Png|*.png|Bitmap|*.bmp|Tiff|*.tif|Gif|*.gif",
+                Title = _lang.GetWord("SaveImageAs")
             };
             saveFileDialog.ShowDialog();
             if (saveFileDialog.FileName.Equals("")) return;
