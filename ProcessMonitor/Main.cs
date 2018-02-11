@@ -18,7 +18,7 @@ namespace ProcessMonitor
     {
         private readonly BackgroundWorker _backgroundworkerRefresh = new BackgroundWorker();
         private readonly ILanguageManager _lm = new LanguageManager();
-        private Language _lang;
+        private ILanguage _lang;
         private PerformanceCounter _pccpu = new PerformanceCounter();
         private PerformanceCounter _pcram = new PerformanceCounter();
         private Series _seriesCpu = new Series();
