@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProcessMonitor</RootNamespace>
     <AssemblyName>ProcessMonitor</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -39,11 +39,8 @@
     <StartupObject>ProcessMonitor.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HelpLibraryManagerLauncher, Version=2016.4.9.0, Culture=neutral, PublicKeyToken=c8895f0c125eff20, processorArchitecture=MSIL">
-      <HintPath>..\packages\HaemmerElectronics.SeppPenner.Language.1.0.0.9\lib\Documentation\Sandcastle\HelpLibraryManagerLauncher.exe</HintPath>
-    </Reference>
-    <Reference Include="Languages, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HaemmerElectronics.SeppPenner.Language.1.0.0.9\lib\.Net 4.7\Languages.dll</HintPath>
+    <Reference Include="Languages, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HaemmerElectronics.SeppPenner.Language.1.0.0.12\lib\net48\Languages.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -96,7 +93,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProcessMonitor.ico" />
+    <Content Include="License.txt" />
+    <Content Include="ProcessMonitor.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
