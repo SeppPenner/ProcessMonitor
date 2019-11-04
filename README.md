@@ -8,7 +8,7 @@ The executable is written and tested in .Net 4.8.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/ProcessMonitor.svg)](https://github.com/SeppPenner/ProcessMonitor/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/ProcessMonitor.svg)](https://github.com/SeppPenner/ProcessMonitor/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/ProcessMonitor.svg)](https://github.com/SeppPenner/ProcessMonitor/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ProcessMonitor/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/ProcessMonitor/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ProcessMonitor/badge.svg)](https://snyk.io/test/github/SeppPenner/ProcessMonitor)
 
 
