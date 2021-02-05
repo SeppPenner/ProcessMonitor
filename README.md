@@ -12,11 +12,11 @@ The executable is written and tested in .Net 5.0.
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/ProcessMonitor/badge.svg)](https://snyk.io/test/github/SeppPenner/ProcessMonitor)
 
 
-## Screenshot from the executable german:
-![Screenshot from the executable german](https://github.com/SeppPenner/ProcessMonitor/blob/master/Screenshot_DE.PNG "Screenshot from the executable german")
+## Screenshot from the executable German
+![Screenshot from the executable German](https://github.com/SeppPenner/ProcessMonitor/blob/master/Screenshot_DE.PNG "Screenshot from the executable German")
 
-## Screenshot from the executable english:
-![Screenshot from the executable english](https://github.com/SeppPenner/ProcessMonitor/blob/master/Screenshot_EN.PNG "Screenshot from the executable english")
+## Screenshot from the executable English
+![Screenshot from the executable English](https://github.com/SeppPenner/ProcessMonitor/blob/master/Screenshot_EN.PNG "Screenshot from the executable English")
 
 Change history
 --------------
