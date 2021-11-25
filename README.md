@@ -2,7 +2,6 @@ ProcessMonitor
 ==============
 
 ProcessMonitor is a software to monitor and log a processe's CPU and RAM usage over the time.
-The executable is written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/33sr4h0y2423g9kh?svg=true)](https://ci.appveyor.com/project/SeppPenner/processmonitor)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/ProcessMonitor.svg)](https://github.com/SeppPenner/ProcessMonitor/issues)
