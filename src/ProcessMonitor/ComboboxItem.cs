@@ -17,12 +17,12 @@ namespace ProcessMonitor
         /// <summary>
         /// Gets or sets the text.
         /// </summary>
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the value.
         /// </summary>
-        public object Value { get; set; }
+        public object Value { get; set; } = string.Empty;
 
         /// <summary>
         /// Converts the object to a <see cref="string"/>.

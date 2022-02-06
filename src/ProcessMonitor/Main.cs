@@ -33,7 +33,7 @@ namespace ProcessMonitor
         /// <summary>
         /// The refresh background worker.
         /// </summary>
-        private readonly BackgroundWorker backgroundWorkerRefresh = new BackgroundWorker();
+        private readonly BackgroundWorker backgroundWorkerRefresh = new();
 
         /// <summary>
         /// The language manager.
@@ -43,27 +43,27 @@ namespace ProcessMonitor
         /// <summary>
         /// The language.
         /// </summary>
-        private ILanguage language;
+        private ILanguage? language;
 
         /// <summary>
         /// The performance counter for the CPU usage.
         /// </summary>
-        private PerformanceCounter performanceCounterCpu = new PerformanceCounter();
+        private PerformanceCounter performanceCounterCpu = new();
 
         /// <summary>
         /// The performance counter for the RAM usage.
         /// </summary>
-        private PerformanceCounter performanceCounterRam = new PerformanceCounter();
+        private PerformanceCounter performanceCounterRam = new();
 
         /// <summary>
         /// The series for the CPU usage.
         /// </summary>
-        private Series seriesCpu = new Series();
+        private Series seriesCpu = new();
 
         /// <summary>
         /// The series for the RAM usage.
         /// </summary>
-        private Series seriesRam = new Series();
+        private Series seriesRam = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Main"/> class.
@@ -99,7 +99,7 @@ namespace ProcessMonitor
                 }
             }
 
-            return null;
+            return string.Empty;
         }
 
         /// <summary>
@@ -163,6 +163,11 @@ namespace ProcessMonitor
             this.InitializeLanguageManager();
             this.LoadLanguagesToCombo();
 
+            if (this.language is null)
+            {
+                return;
+            }
+
             // Background worker
             this.backgroundWorkerRefresh.WorkerSupportsCancellation = true;
             this.backgroundWorkerRefresh.DoWork += this.Refresh;
@@ -220,6 +225,11 @@ namespace ProcessMonitor
                     CounterName = "% Processor Time",
                     InstanceName = GetInstanceNameForProcessId((int)this.GetCurrentSelectedItem().Value)
                 };
+
+                if (this.language is null)
+                {
+                    return;
+                }
 
                 if (this.checkBoxLogToCSV.Checked)
                 {
@@ -418,6 +428,11 @@ namespace ProcessMonitor
         {
             this.backgroundWorkerRefresh.CancelAsync();
 
+            if (this.language is null)
+            {
+                return;
+            }
+
             var saveFileDialog = new SaveFileDialog
             {
                 Filter = @"Jpeg|*.jpg|Png|*.png|Bitmap|*.bmp|Tiff|*.tif|Gif|*.gif",
@@ -465,6 +480,11 @@ namespace ProcessMonitor
         private void ButtonSaveRamImageClick(object sender, EventArgs e)
         {
             this.backgroundWorkerRefresh.CancelAsync();
+
+            if (this.language is null)
+            {
+                return;
+            }
 
             var saveFileDialog = new SaveFileDialog
             {
