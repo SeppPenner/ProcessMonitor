@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="UiThreadInvokeClass.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,30 +7,26 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ProcessMonitor.UiThreadInvoke
+namespace ProcessMonitor.UiThreadInvoke;
+
+/// <summary>
+/// The UI thread invoke class.
+/// </summary>
+public static class UiThreadInvokeClass
 {
-    using System;
-    using System.Windows.Forms;
-
     /// <summary>
-    /// The UI thread invoke class.
+    /// Invokes the UI thread from a background thread.
     /// </summary>
-    public static class UiThreadInvokeClass
+    /// <param name="control">The control.</param>
+    /// <param name="code">The code.</param>
+    public static void UiThreadInvoke(this Control control, Action code)
     {
-        /// <summary>
-        /// Invokes the UI thread from a background thread.
-        /// </summary>
-        /// <param name="control">The control.</param>
-        /// <param name="code">The code.</param>
-        public static void UiThreadInvoke(this Control control, Action code)
+        if (control.InvokeRequired)
         {
-            if (control.InvokeRequired)
-            {
-                control.Invoke(code);
-                return;
-            }
-
-            code.Invoke();
+            control.Invoke(code);
+            return;
         }
+
+        code.Invoke();
     }
 }
