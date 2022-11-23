@@ -92,7 +92,7 @@ public partial class Main : Form
     private void InitializeLanguageManager()
     {
         this.languageManager.SetCurrentLanguage("de-DE");
-        this.languageManager.OnLanguageChanged += this.OnLanguageChanged;
+        this.languageManager.OnLanguageChanged += this.OnLanguageChanged!;
     }
 
     /// <summary>
@@ -161,7 +161,7 @@ public partial class Main : Form
 
         // Background worker
         this.backgroundWorkerRefresh.WorkerSupportsCancellation = true;
-        this.backgroundWorkerRefresh.DoWork += this.Refresh;
+        this.backgroundWorkerRefresh.DoWork += this.Refresh!;
 
         // Chart for RAM usage
         this.chartRAM.Titles.Clear();
