@@ -115,7 +115,7 @@ public partial class Main : Form
     /// <param name="e">The event args.</param>
     private void ComboBoxLanguageSelectedIndexChanged(object sender, EventArgs e)
     {
-        var selectedItem = this.comboBoxLanguage.SelectedItem.ToString();
+        var selectedItem = this.comboBoxLanguage.SelectedItem?.ToString();
 
         if (string.IsNullOrWhiteSpace(selectedItem))
         {
@@ -339,7 +339,17 @@ public partial class Main : Form
     private ComboboxItem GetCurrentSelectedItem()
     {
         var tempItem = new ComboboxItem();
-        this.UiThreadInvoke(() => { tempItem = (ComboboxItem)this.comboBoxProcesses.SelectedItem; });
+        this.UiThreadInvoke(() =>
+        {
+            var item = this.comboBoxProcesses.SelectedItem;
+
+            if (item is null)
+            {
+                return;
+            }
+
+            tempItem = (ComboboxItem)item;
+        });
         return tempItem;
     }
 
@@ -384,16 +394,22 @@ public partial class Main : Form
 
             for (var i = this.comboBoxProcesses.Items.Count - 1; i >= 0; i--)
             {
-                var item = (ComboboxItem)this.comboBoxProcesses.Items[i];
+                var item = this.comboBoxProcesses.Items[i];
+                
+                if (item is null)
+                {
+                    continue;
+                }
 
-                if (allProcesses.SingleOrDefault(x => x.Id == (int)item.Value) == null)
+                var comboBoxItem = (ComboboxItem)item;
+
+                if (allProcesses.SingleOrDefault(x => x.Id == (int)comboBoxItem.Value) == null)
                 {
                     this.comboBoxProcesses.Items.RemoveAt(i);
                 }
             }
         }
-        catch (
-            Exception ex)
+        catch (Exception ex)
         {
             this.ButtonEndMeasuringClick(sender, e);
             MessageBox.Show(ex.Message + ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
